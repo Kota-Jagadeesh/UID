@@ -1,4 +1,4 @@
-# Kota Jagadeeshwar Reddy – Portfolio Website
+# Kota Jagadeesh – Portfolio Website
 
 **Course**: 23AID215 – User Interface Design Lab  
 **Institution**: Amrita Vishwa Vidyapeetham  
