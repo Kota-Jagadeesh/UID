@@ -1,36 +1,71 @@
-# Portfolio asignment
+# Kota Jagadeeshwar Reddy – Portfolio Website
 
-This is the source code for my portfolio assignment. This is built with       **HTML, CSS, and a sprinkle of Logic** to keep it fast and easily maintainable.
+**Course**: 23AID215 – User Interface Design Lab  
+**Institution**: Amrita Vishwa Vidyapeetham  
+**Assignment**: Portfolio Website (15 marks)  
+**Submitted by**: Kota Jagadeeshwar Reddy  
 
-## Architecture
+This project is a multi-page personal portfolio website developed using **HTML5** and **CSS3**.
 
-Structured this project to be modular despite being a static site. and separated the concerns into specific stylesheet.
+GitHub Pages link (after deployment):  
+[https://kota-jagadeesh.github.io/portfolio/](https://kota-jagadeesh.github.io/portfolio/)
 
-* **`style-core.css`**: The manin css. It handles the CSS Variables (Theming), the responsive Navbar logic, and the global Layout resets.
-* **`style.css`**: Home-page specific styles including the profile ripple animations and profile transitions.
-* **feature-Specific CSS**: (`about.css`, `projects.css`, `contact.css`) specialized styles for the Timeline, Project Grid, and Form layouts.
+## Website Structure
 
-## Technical Highlights
+The website consists of **five separate HTML pages** connected via a consistent navigation menu.
 
-### 1. The "Checkbox" Navigation
-I implemented a fully responsive mobile hamburger menu.
-* **How:** by using a hidden `<input type="checkbox">` and the CSS sibling selector (`#menu-toggle:checked ~ .nav-links`). 
-* **Why:** coz it reduces the "Time to Interactive" and ensures the menu works even if a user has JS disabled.
+| File            | Purpose                              | Main Content / Features                              |
+|-----------------|--------------------------------------|-------------------------------------------------------|
+| `index.html`    | Home page                  | Profile section with profile picture + ripple animation, featured projects teaser |
+| `about.html`    | About me                             | Education timeline, short bio                         |
+| `skills.html`   | Skills showcase                      | Colorful skill badges with hover scale & glow         |
+| `projects.html` | Project gallery                      | Responsive grid with background images |
+| `contact.html`  | Contact information                  | Email, GitHub, LinkedIn links + styled form appearance|
 
-### 2. Performance-First Theming
-locked this site into a **Permanent Dark Theme** (`#0f0f1a`). 
-* Uses **CSS Custom Properties (Variables)** for colors and shadows, making it  easy to tweak the primary `--accent` color (#7b5eff) across the entire site in one line.
-* utilised `backdrop-filter: blur()` for that modern "glassmorphism" effect on the sticky navbar.
+### Shared Elements (present on every page)
+- Sticky navigation bar with five functional links  
+  Home • About • Skills • Projects • Contact
+- Footer with copyright notice
 
-### 3. CSS-Only Profile Ripple
-The main section has a profile wrapper with a custom `@keyframes ripple` animation. This creates a pulsing depth effect on hover using stacked `box-shadows`.
+## Technologies & Implementation Details
 
-### 4. Optimized Project Grids
-in this the  `projects.grid` uses `grid-template-columns: repeat(auto-fit, minmax(320px, 1fr))`. means the layout **calculates itself** - it's perfectly responsive on everything from a giant monitor to a 5-year-old Android phone without needing dozens of media queries.
+- **HTML5** – semantic elements (`header`, `nav`, `main`, `section`, `footer`, etc.)
+- **CSS3** – Flexbox, CSS Grid, custom properties, media queries, transitions, hover effects, animations (`@keyframes`), gradients, box-shadows, backdrop-filter
+- Google Fonts – Poppins
+- External resources – Devicon CDN (skill icons), Unsplash (background images)
+- No CSS frameworks, no JavaScript libraries
 
-## Deployment
-Currently optimized for **GitHub Pages**. Since it’s purely static
+### Creative Features Implemented
+- Pure CSS ripple animation on profile picture (hero section)
+- Smooth hover scaling + glow on skill badges
+- Large project cards with visible background images + gradient overlay (home page)
+- Full-screen CSS-only modal popups with project-specific backgrounds (projects page)
+- Responsive layout (mobile-first + breakpoints)
+- Smooth page scrolling (`scroll-behavior: smooth`)
+- Gradient text titles
+- Card layouts with box shadows and transitions
 
-Want to see my original portfolio -> [kota-neon.vercel.app](https://kota-neon.vercel.app)
----
-*Built with ❤️*
+## Folder Structure
+```md
+portfolio/
+├── index.html
+├── about.html
+├── skills.html
+├── projects.html
+├── contact.html
+├── css/
+│   └── style-core.css         (shared styles + variables)
+├── images/                    (profile photo, thumbnails, modal backgrounds)
+└── README.md
+```
+
+## How to View the Website Locally
+
+1. Download or clone the repository:
+   ```bash
+   git clone https://github.com/Kota-Jagadeesh/portfolio.git
+   ```
+2. Open the folder in any code editor (VS Code recommended) 
+3. Double-click index.html to open it in your browser
+4. VS Code -> Live Server extension
+5. Navigate between pages using the top menu
