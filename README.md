@@ -31,6 +31,6 @@ in this the  `projects.grid` uses `grid-template-columns: repeat(auto-fit, minma
 ## Deployment
 Currently optimized for **GitHub Pages**. Since it’s purely static
 
-Want to see my original portfolio -> [kota-neon.vercel.app](https://kota-ne)
+Want to see my original portfolio -> [kota-neon.vercel.app](https://kota-neon.vercel.app)
 ---
 *Built with ❤️*
